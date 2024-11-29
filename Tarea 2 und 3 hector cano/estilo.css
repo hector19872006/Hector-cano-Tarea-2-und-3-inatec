@@ -1,0 +1,261 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e1dcdc;
+    color: #3f3939;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: skyblue;
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+    
+}
+
+.nav-toggle {
+    display: none; 
+    cursor: pointer;
+    font-size: 1.5em;
+    color: white;
+}
+
+.hero {
+    background-image: url("imagenes/A1.jpg"); 
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 150px 20px;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+
+    
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin: 3%;
+}
+
+.hero p {
+    font-size: 1.2em;
+}
+
+.cta-button {
+    background-color: skyblue;
+    color: #ffffff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #3700b3;
+    transform: scale(1.05);
+}
+
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+}
+
+.price {
+    font-weight: bold;
+    color: rgb(193, 135, 235);
+    font-size: 1.2em;
+}
+
+button {
+    background-color: skyblue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #3700b3;
+    transform: scale(1.05);
+}
+
+.testimonials {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.testimonial {
+    margin: 20px 0;
+    font-style: italic;
+}
+
+footer {
+    background-color: skyblue;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 20px 0;
+}
+.contact {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; 
+}
+
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: skyblue;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: skyblue; 
+    outline: none; 
+}
+
+button {
+    padding: 10px;
+    background-color: skyblue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #3700b3; 
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .contact {
+        padding: 20px 10px; 
+    }
+
+    input, textarea {
+        font-size: 14px; 
+    }
+
+    button {
+        font-size: 14px; 
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        display: none; 
+        flex-direction: filas;
+        width: 100%;
+        background-color: skyblue;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+
+    nav ul.active {
+        display: flex; 
+        
+    }
+
+    .nav-toggle {
+        display: block; 
+        margin-top: 10px;
+        margin-right: 20px;
+        color: white;
+        font-size: 1.5em;
+        cursor: pointer;
+        top: 10px;
+        right: 20px;
+    }
